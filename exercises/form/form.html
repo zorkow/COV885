@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<style>
+.imgDisabled
+ {
+ Cursor:none !important; Text-Decoration: None !important; 
+}
+.imgDefault
+ {
+ Cursor:default !important; Text-Decoration: None !important; 
+}
+</style>
+<body>
+
+<h2>What races are these cats?</h2>
+
+
+<div aria-hidden=true>
+<a class="imgDefault" href="https://en.wikipedia.org/wiki/American_Bobtail"><img width="300" src="cat1.jpg"/></a>
+<a class="imgDisabled" href="https://en.wikipedia.org/wiki/Aegean_cat"><img width="300" src="cat2.jpg"/></a>
+<a class="imgDefault" href="https://en.wikipedia.org/wiki/Abyssinian_cat"><img width="300" src="cat3.jpg"/></a>
+</div>
+
+<form>
+  <label>Left:</label><br>
+  <input type="text"><br>
+  <label>Center:</label><br>
+  <input type="text"><br>
+  <label>Right:</label><br>
+  <input type="text"><br>
+</form> 
+<button onclick="window.location.href='https://en.wikipedia.org/wiki/List_of_cat_breeds';">?</a></button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button> &#10004;</button>
+
+<p style="color:grey">Note, that if you press the button nothing will happen!</p>
+
+</body>
+</html>
