@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[backref]{hyperref}
+
+\begin{document}
+\section{Hello}
+\cite{ref1, ref2, ref3, ref4}
+\section{World}
+\cite{ref1, ref3}
+\newpage
+\section{Next section}
+\cite{ref1}
+\newpage
+\section{Last section}
+\cite{ref1, ref2}
+\newpage
+
+\begin{thebibliography}{99}
+\bibitem{ref1} Dummy entry one.
+
+\bibitem{ref2} Dummy entry two.
+
+\bibitem{ref3} Dummy entry three.
+
+\bibitem{ref4} Dummy entry four.
+
+\end{thebibliography}
+
+\end{document}

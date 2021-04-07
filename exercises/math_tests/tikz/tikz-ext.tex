@@ -1,0 +1,17 @@
+% Main file
+% Real document class:
+\documentclass{article}
+% Use the ’standalone’ package:
+\usepackage{standalone}
+% Load all packages needed for all sub−files:
+\usepackage{tikz}
+% Inside the real ’document’ environment
+% read the sub−file with ’\input’
+\begin{document}
+% ...
+\begin{figure}
+\input{tikz-ext-picture}
+\caption{A subfile}
+\end{figure}
+% ...
+\end{document}

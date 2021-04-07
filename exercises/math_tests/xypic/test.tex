@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\usepackage[color,matrix,arrow,2cell,all, rotate,pdf]{xy}
+\usepackage{xcolor}
+
+\begin{document}
+
+  Consider the following diagram:
+  \[
+  \xymatrixcolsep{1.8cm}
+  \xymatrixrowsep{1.56cm}
+  \xymatrix{
+  & {K} \ar@<0.6ex>[d]^{\kappa_2} \ar@<-0.6ex>[d]_{\kappa_1} \\
+  {\cdot} \ar@[red]@{.>}[ur]^{\color{red}!~(u, v)} \ar@<0.6ex>[r]^u
+  \ar@<-0.6ex>[r]_v & {A} \ar[r]^f \ar[dr]_g & {B}
+  \ar@[brown]@{-->}[d]^{\color{brown}!~ h}\\
+  & & {\cdot}
+  },
+  \]
+
+\end{document}
+

@@ -1,0 +1,119 @@
+%% Beamerfix.
+\makeatletter\let\ifGm@compatii\relax\makeatother
+
+\mode<article>{\usepackage{fullpage}}
+\mode<presentation>{\usetheme{Goettingen}}
+
+
+\definecolor{Brown}{cmyk}{0,0.81,1,0.60}
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\definecolor{Red}{cmyk}{0,1,1,0}
+\definecolor{Blue}{cmyk}{1,1,0,0}
+ 
+
+\usepackage{graphicx}
+%%\usepackage[dvipsnames]{xcolor}
+\usepackage{rotating}
+\usepackage{listings}
+\usepackage{mdwlist}
+\usepackage{algorithm2e, algorithmic,float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage[xindy]{glossaries}
+
+\def\lstjava{
+  \lstset{language=Java,
+    keywordstyle=\ttfamily\color{OliveGreen},
+    identifierstyle=\ttfamily\color{CadetBlue}\bfseries, 
+    commentstyle=\color{Brown},
+    stringstyle=\ttfamily,
+    showstringspaces=false,
+    columns=[l]flexible %% , basewidth={0.5em,0.4em}
+  }
+}
+
+\def\lstxml{
+  \lstset{language=XML,
+    keywordstyle=\ttfamily\color{OliveGreen},
+    identifierstyle=\ttfamily\color{CadetBlue}\bfseries, 
+    commentstyle=\color{Brown},
+    stringstyle=\ttfamily,
+    showstringspaces=false,
+    columns=[l]flexible %% , basewidth={0.5em,0.4em}
+  }
+}
+
+
+\lstjava
+
+\only<presentation>{\lstset{basicstyle=\footnotesize}}
+\only<article>{\lstset{basicstyle=\small}}
+
+\newcommand\jpack[1]{\texttt{#1}}
+\newcommand\javaf[1]{\texttt{\only<presentation>{\color{CadetBlue}}#1}}
+\newcommand\class[1]{\texttt{\only<presentation>{\color{CadetBlue}}#1}}
+
+\newcommand\unix[1]{\texttt{#1}}
+\newcommand\prompt{\texttt{\#}}
+
+\newcommand\setlst{\only<presentation>{\lstset{basicstyle=\scriptsize}}}
+\newcommand\resetlst{\only<presentation>{\lstset{basicstyle=\tiny}}}
+
+\newcommand\blacklst{\only<presentation>{\lstset{keywordstyle=\ttfamily\color{Black},%
+      identifierstyle=\ttfamily\color{Black}\bfseries,%
+      commentstyle=\color{Black},%
+    }}}
+\newcommand\colorlst{\only<presentation>{\lstset{keywordstyle=\ttfamily\color{OliveGreen},%
+      identifierstyle=\ttfamily\color{CadetBlue}\bfseries,%
+      commentstyle=\color{Brown},%
+    }}}
+
+
+\newenvironment{codedescription}
+               {\list{}{\labelwidth\z@ \itemindent-\leftmargin
+                        \let\makelabel\codedescrlabel}}
+               {\endlist}
+\newcommand*\codedescrlabel[1]{\hspace\labelsep
+  \normalfont\ttfamily #1}
+
+
+\makeatletter
+\long\def\myglos{\@ifnextchar[{\@myglostwo}{\@myglosone}}
+% \long\def\@myglosone#1#2{\glossary{name=#1,description=#2}}
+% \long\def\@myglostwo[#1]#2#3{\glossary{name=#2,description=#3,sort=#1}}
+\long\def\@myglosone#1#2{\newglossaryentry{#1}{name=#1,description={#2}}} % \useglosentry{glos:#1}}
+\long\def\@myglostwo[#1]#2#3#4#5{\newglossaryentry{#1}{name=\ensuremath{#2},description={#3\\See also \url{#4}\\Example: #5\\On page},sort=#1}} % \useglosentry{glos:#2}}
+\makeatother
+
+\def\myGls#1{\textcolor{white}{\Gls{#1}}}
+
+% \def\myuseglosentry#1{\ifAllPages{\useglosentry{#1}}\else{}\fi}
+% \def\myuseglosentrytwo#1#2{\ifAllPages{\useglosentry{glos:#1}}\else{\myglos{#1}{#2}}\fi}
+
+\long\def\mydef#1#2{\item[#1] #2 \myglos{#1}{{#2}}}
+
+\def\glossarysection[#1]#2#3{\section*{Glossary and List of Symbols}}
+
+%%% Algorithm stuff
+\SetKw{Let}{let}
+\SetKw{Failure}{failure}
+\SetKw{True}{true}
+\SetKw{False}{false}
+\SetKw{Choose}{choose}
+
+
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+
+\newcommand{\Pb}{\mathbb{P}}
+
+\newcommand\Stripsop[4]{
+  \begin{tabular}{ll}
+    #1 & \\
+    \texttt{Preconditions:} & #2\\
+    \texttt{Delete List:} & #3\\
+    \texttt{Add List:} & #4\\
+  \end{tabular}}

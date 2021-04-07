@@ -1,0 +1,69 @@
+\documentclass{article}
+% CC-by from https://tex.stackexchange.com/questions/556836/cmidrule-alignment-in-multirow-and-rotatebox
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{lscape}
+\newcommand{\CustomCheckedBox}{\resizebox{!}{11pt}{%
+        \begin{tikzpicture}
+        \draw[line width=2pt, rounded corners] (0.75,1)--(0,1)--(0,0) -- (1,0) -- (1,0.5);
+        \draw[xshift=0cm,yshift=0.35cm,line width=2pt] (0.25,0.25)--(0.5,0)--(1,0.5);
+        \end{tikzpicture}}}
+
+\newcommand{\CustomSquare}{\resizebox{!}{11pt}{%
+        \begin{tikzpicture}
+        \draw[line width=2pt, rounded corners] (1,1)--(0,1)--(0,0) -- (1,0) -- cycle;
+        \end{tikzpicture}}%
+}
+
+\begin{document}
+    \begin{landscape}
+    \begin{tabular}{@{\hspace{1cm}}p{3.5cm} lll lll lll lll l}
+
+        \toprule
+        \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Waste class}}} &
+        \multicolumn{4}{c}{\textbf{Characteristics}} &
+        \multicolumn{2}{c}{\multirow{2}[2]{*}{\textbf{Dangerousness}}}  &
+        \multicolumn{3}{c}{\multirow{2}[2]{*}{\textbf{Risk rating}}} &
+        \multicolumn{4}{c}{\multirow{2}[2]{*}{\textbf{Economic aspect}}}\\
+        \cmidrule(r{1mm}){2-5}
+        \cmidrule(l{1mm}){6-7}
+        \cmidrule(r{1mm}l{1mm}){8-10}
+        \cmidrule(l{1mm}){11-14}
+        &
+        \multicolumn{2}{c}{\textbf{physical}} &
+        \multicolumn{2}{c}{\textbf{chemical}} &
+        &&&&&&&&\\
+        \cmidrule(r{1mm}){2-3}
+        \cmidrule(r{1mm}){4-5}
+        &
+        \rotatebox{75}{\textbf{Dry}} &
+        \rotatebox{75}{\textbf{Wet}} &
+        \rotatebox{75}{\textbf{Organic}} &
+        \rotatebox{75}{\textbf{Inorganic}} &
+        \rotatebox{75}{\textbf{Dangerous}} &
+        \rotatebox{75}{\textbf{Not dangerous}} &
+        \rotatebox{75}{\textbf{Hazardous}} &
+        \rotatebox{75}{\textbf{Biodegradable}} &
+        \rotatebox{75}{\textbf{Non biodegradable}} &
+        \rotatebox{75}{\textbf{Reusable}} &
+        \rotatebox{75}{\textbf{Compostable}} &
+        \rotatebox{75}{\textbf{Recoverable}} &
+        \rotatebox{75}{\textbf{Unusable}}\\
+        \midrule
+
+        \multicolumn{14}{l}{\textbf{Municipal Solid Waste}}\\\cmidrule{1-1}
+        \multicolumn{14}{l}{\hspace{5mm}\textbf{Home}}\\\cmidrule(l{5mm}){1-1}
+        Recyclable & \CustomCheckedBox & \CustomSquare & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomSquare & \CustomCheckedBox & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomSquare\\
+        Unusable & \CustomCheckedBox & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomCheckedBox & \CustomSquare & \CustomSquare & \CustomSquare & \CustomCheckedBox\\
+        Organic & \CustomSquare & \CustomCheckedBox & \CustomCheckedBox & \CustomSquare & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomSquare\\
+        \multicolumn{14}{l}{\hspace{5mm}\textbf{Urban}}\\\cmidrule(l{5mm}){1-1}%&  &  &  &  &  &  &  &  &  &  &    &  & \\
+        Sweeping & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomSquare & \CustomSquare & \CustomSquare & \CustomCheckedBox\\
+        Pruning tree & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomSquare\\
+        Weeding & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomSquare & \CustomCheckedBox & \CustomSquare & \CustomSquare\\
+        \bottomrule
+    \end{tabular}
+
+\end{landscape}
+
+\end{document}

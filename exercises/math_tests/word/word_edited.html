@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Rapid idempotent ultrafilters</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Rapid idempotent ultrafilters</h1>
+</header>
+<p>Welcome back to the second (and final) part on why <a href="file:////0103/">strongly summable ultrafilters are rapid</a>.</p>
+<p>Why the new title? Well, first, I needed another one (I’ve had too many posts with “Part X” in them, I think). Second, after I proved the results I mentioned last time, I quickly found an additional, somewhat more general observation regarding idempotents.</p>
+<p>Here’s the problem with this post though. I want to give the argument. But you know how it is in mathematics: standing on the shoulders of the huddled masses giants and all that. All work relies on established results. In the first post, I gave a lot of “unnecessary” proofs to motivate the story behind the result. In this post, I’ll get to the actual proof and I’m torn, I’m not sure how much to quote and how much to prove. So bear with me and leave comments whenever I screw up.</p>
+<h2 id="strongly-summables-are-rapid.">Strongly summables are rapid.</h2>
+<p>Why could this be true? On the one hand, because we already established partial results <a href="file:////0103/">last time</a>. On the other hand there’s an old result attributed to Pierre Matet which, for now, I can only state in a obfuscated fashion.</p>
+<blockquote>
+<p><strong>Theorem</strong> (<a href="http://dx.doi.org/10.2307/2274523">Matet 87</a>) If <span class="math inline">\(p\)</span> is a <a href="file:////0026/">strongly summable ultrafilter</a>, then there exists a function “<em>"</em><span class="math inline">\(\max&quot;\ \)</span>” such that <em>"</em><span class="math inline">\(\max&quot;\ \left( p \right)\)</span> rapid.</p>
+</blockquote>
+<p>So you see, strongly summable ultrafilters imply the existence of rapid ultrafilters – via a very simple <em>"</em><span class="math inline">\(\max&quot;\ \)</span>-function.</p>
+<p>What’s <em>"</em><span class="math inline">\(\max&quot;\ \)</span>, you’re asking?</p>
+<p>Ah yes, I should talk about <em>"</em><span class="math inline">\(\max&quot;\ \)</span>…</p>
+<h3 id="textmax-to-the-max."><span class="math inline">\(\text{max}\)</span> to the Max.</h3>
+<p>For <a href="file:////0026/">FS-sets</a>, there is a natural notion of maximum. If you have a bunch of elements summed up, then it makes sense to call the largest summand the maximum. So intuitively, the maximum should simply map each element in the FS-set to the largest generator involved in producing it. This might not appear very well defined but bear with me.</p>
+<p>Consider an <a href="file:////0026/">FS-set</a>, let’s keep calling it <span class="math inline">\(\text{FS}\left( x_{n} \right)\)</span>. If we’re lucky, there is a <em>unique</em> way to write each <span class="math inline">\(y \in \text{FS}\left( x_{n} \right)\)</span> as a sum of <span class="math inline">\(x_{i}\)</span> (or should I write <span class="math inline">\(x_{n}\)</span>? indices are hard…). For example, the sequence <span class="math inline">\(\left( 2^{n} \right)_{n \in \omega}\)</span> has this property while <span class="math inline">\(\left( n \right)_{n\mathbb{\in N}}\)</span> fails to have this property (quite badly, I suppose).</p>
+<p>It turns out that there’s an easy property to ensure this: the sequence just has to grow quickly.</p>
+<blockquote>
+<p><strong>Proposition</strong> (folklore? can be found in <a href="http://dx.doi.org/10.1090/S0002-9947-1987-0906807-4#sthash.YLoWoL89.dpuf">Blass, Hindman 87</a>) If <span class="math inline">\(x_{n} &gt; \sum_{i &lt; n}^{}x_{i}\)</span> for all <span class="math inline">\(n\)</span>, then</p>
+</blockquote>
+<p><span class="math display">\[\sum_{i \in s}^{}x_{i} = \sum_{i \in t}^{}x_{i} \Rightarrow s = t.\]</span></p>
+<blockquote>
+<p>In other words, each element in <span class="math inline">\(\text{FS}\left( x_{n} \right)\)</span> has a <em>unique representation</em>.</p>
+</blockquote>
+<p>The proof is an easy induction on <span class="math inline">\(\left| s \right|,\left| t \right|\)</span>, using the growth factor to argue that the maximal element of <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> must be equal.</p>
+<ul>
+<li>If <span class="math inline">\(\left| s \right| = \left| t \right| = 1\)</span>, then <span class="math inline">\(s = t\)</span> follows immediately from the growth assumption.</li>
+<li>Now assume inductively that we’ve proved the claim for smaller sets.</li>
+<li>Let <span class="math inline">\(n\)</span> be the maximum of <span class="math inline">\(s \cup t\)</span>.</li>
+<li>Wlog, <span class="math inline">\(n \in s\)</span>.</li>
+<li>Then we must also have <span class="math inline">\(n \in t\)</span> – otherwise</li>
+</ul>
+<p><span class="math display">\[\sum_{i \in s}^{}x_{i} \geq x_{n} &gt; \sum_{i &lt; n}^{}x_{i} \geq \sum_{i \in t}^{}x_{i},\]</span></p>
+<ul>
+<li>a contradiction to the assumed equality of both sums.</li>
+<li>But if both <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span> contain <span class="math inline">\(n\)</span>, we also have <span class="math inline">\(\sum\_(s\text{\{}n\})\hat{} ▒x\_ i\  = \sum\_(t\text{\{}n\})\hat{} ▒x\_ i\ \)</span>.</li>
+<li>Using our induction hypothesis, we have <span class="math inline">\(s\text{\{}n\} = t\text{\{}n\}\)</span>, hence <span class="math inline">\(s = t\)</span>.</li>
+</ul>
+<p>So <em>if</em> we have unique representations of elements in <span class="math inline">\(\text{FS}\left( x_{n} \right)\)</span>, we can define a function</p>
+<p><span class="math display">\[\text{max}:\text{FS}\left( x_{n} \right)\mathbb{\rightarrow N,}\text{max}\left( y \right) ≔ x_{\text{max}s}\text{\ where\ }\sum_{i \in s}^{}x_{i} = y.\]</span></p>
+<h3 id="growth-growth-growth-and-more-growth">Growth, growth, growth and more growth</h3>
+<p>Unfortunately, we need to tweak this a little bit more. Remember that FS-sets are all about sums. Very often <span class="math inline">\(y,z \in \text{FS}\left( x_{n} \right)\)</span> will have <span class="math inline">\(y + z \in \text{FS}\left( x_{n} \right)\)</span>. So assuming growth, <span class="math inline">\(y,z,y + z\)</span> each have a unique representation in terms of the <span class="math inline">\(x_{i}\)</span>.</p>
+<p>It’s natural to assume that there’s some kind of connection between the representations of <span class="math inline">\(y,z,y + z\)</span>. For one thing, we know that if <span class="math inline">\(s \cap t = \varnothing\)</span>, then <span class="math inline">\(\sum_{i \in s}^{}x_{i} + \sum_{i \in t}^{}x_{i} \in \text{FS}\left( x_{n} \right)\)</span>. The growth as above does not guarantee the reverse, though (just consider <span class="math inline">\(\text{FS}\left( 2^{n} \right)\)</span>), and the reverse often simplifies things. Fortunately, all we have to do is improve the growth!</p>
+<blockquote>
+<p><strong>Proposition</strong> (<a href="http://dx.doi.org/10.1090/S0002-9947-1987-0906807-4#sthash.YLoWoL89.dpuf">Hindman, Blass 87</a>) If <span class="math inline">\(x_{n} &gt; 2 \cdot \sum_{i &lt; n}^{}x_{i}\)</span>, then <span class="math inline">\(\sum_{i \in s}^{}x_{i} + \sum_{i \in t}^{}x_{i} = \sum_{i \in v}^{}x_{i}\)</span> if and only if <span class="math inline">\(s \cap t = \varnothing\)</span> and <span class="math inline">\(v = s \cup t\)</span>.</p>
+</blockquote>
+<p>The proof is much like the earlier proof.</p>
+<ul>
+<li>Again, we’re doing an induction on <span class="math inline">\(\left| s \cup t \cup v \right|\)</span>.</li>
+<li>If <span class="math inline">\(\left| s \cup t \cup v \right| = 1\)</span>, then <span class="math inline">\(s\)</span> or <span class="math inline">\(t\)</span> must be empty and the growth condition does the rest.</li>
+<li>For the inductive step, let <span class="math inline">\(n: = ``\max&quot;\ \left( s,t,v \right)\)</span>ue to the growth condition, <span class="math inline">\(n\)</span> must be in <span class="math inline">\(v\)</span>.</li>
+<li>But it must also lie in <span class="math inline">\(s \cup t\)</span>.
+<ul>
+<li>Else <span class="math inline">\(\sum_{i \in v}^{}x_{i} \geq x_{n} &gt; 2\sum_{i &lt; n}^{}x_{i} \geq \sum_{i \in s}^{}x_{i} + \sum_{i \in t}^{}x_{i}\)</span>.</li>
+</ul></li>
+<li>But it can’t be in both <span class="math inline">\(s\)</span> and <span class="math inline">\(t\)</span>.
+<ul>
+<li>Else <span class="math inline">\(\sum_{i \in v}^{}x_{i} &lt; 2x_{n} &lt; \sum_{i \in s}^{}x_{i} + \sum_{i \in t}^{}x_{i}\)</span>.</li>
+</ul></li>
+<li>Wlog <span class="math inline">\(n \in s\)</span></li>
+<li>Th <span class="math inline">\(\sum_{i \in s\backslash n}^{}x_{i} + \sum_{i \in t}^{}x_{o} = \sum_{i \in v\backslash n}^{}x_{i}\)</span>.</li>
+<li>Applying our induction hypothesis to <span class="math inline">\(|(s\text{\{}n\}) \cup t \cup (v\text{\{}n\})|\)</span>, we get <span class="math inline">\(s\backslash n \cap t = \varnothing\)</span> and <span class="math inline">\((s\text{\{}n\}) \cup t = v\text{\{}n\}\)</span>.</li>
+<li>This in turn gives us <span class="math inline">\(s \cap t = \varnothing\)</span> (as <span class="math inline">\(n \notin t\)</span>) and <span class="math inline">\(s \cup t = v\)</span> – as desired.</li>
+</ul>
+<p>Why all this trouble? Well, there are many uses for this. For what’s coming below, it simplifies an important calculation. In general, it is extremely important since it allows us to switch from the addition of numbers to the union of disjoint, finite sets. (I don’t know about you, but I find the union operation on disjoint sets much easier to comprehend.)</p>
+<blockquote>
+<p><strong>Corollary</strong> If <span class="math inline">\(\text{FS}\left( x_{n} \right)\)</span> has growth as above, then if we ever have <span class="math inline">\(y,z,y + z \in \text{FS}\left( x_{n} \right)\)</span> (and we will), then, assuming <span class="math inline">\(y &lt; z\)</span>, we have <em>"</em><span class="math inline">\(max&quot;\ \left( y + z \right) = &quot;max&quot;\ \left( z \right)\)</span>articular, if <span class="math inline">\(\text{FS}\left( y_{n} \right) \subseteq \text{FS}\left( x_{n} \right)\)</span>, then <em>"</em><span class="math inline">\(max&quot;\ \left\lbrack \text{FS}\left( y_{n} \right) \right\rbrack = &quot;max&quot;\ \left\lbrack \left\{ y_{n}:n \in \omega \right\} \right\rbrack\)</span>ngly summable ultrafitlers are rapid – the proof.</p>
+</blockquote>
+<p>Anyway, let’s get back to where we started. First, we should make a connection to strongly summable ultrafilters.</p>
+<blockquote>
+<p><strong>Lemma</strong> (<a href="http://dx.doi.org/10.1090/S0002-9947-1987-0906807-4#sthash.YLoWoL89.dpuf">Blass, Hindman 87</a>) If <span class="math inline">\(p\)</span> is strongly summable, then <span class="math inline">\(p\)</span> has a base of FS-sets whose sequences satisfy the growth condition (the stronger one with factor <span class="math inline">\(2\)</span>, of course).</p>
+</blockquote>
+<p>This is a great lemma (though maybe not a <a href="http://www.math.rutgers.edu/~zeilberg/Opinion82.html">true lemma</a>) and the reason why I spend so much time above talking about growth conditions – it comes in handy in many situations and really tells us something about strongly summable ultrafilters and the sets they contain. The proof, however, is weird so I’ll skip it (unless you insist in the comments).</p>
+<p>And now it makes sense to state the initial theorem.</p>
+<blockquote>
+<p><strong>Theorem</strong> (<a href="http://dx.doi.org/10.1017/S0022481200028450">Matet, 87</a> / <a href="http://dx.doi.org/10.1090/S0002-9947-1987-0906807-4#sthash.YLoWoL89.dpuf">Blass, Hindman 87</a>) Let <span class="math inline">\(p\)</span> be a strongly summable ultrafilter and <span class="math inline">\(\text{FS}\left( x_{n} \right) \in p\)</span> with growth (or just unique representations); fix the <em>"</em><span class="math inline">\(\max&quot;\ \)</span>-function for <span class="math inline">\(\text{FS}\left( x_{n} \right)\)</span> as above. Then <em>"</em><span class="math inline">\(\max&quot;\ \left( p \right)\)</span> a rapid P-point.</p>
+</blockquote>
+<p>You can skip the proof if you like because it’s not important to us (and I’m cheating a little on the important part, rapidity). But I find the argument appealing and since I’ve had to go through all the trouble to introduce the growth condition and so forth, I think I might as well include this, too. It’s a typical proof for strongly summable ultrafilters – just write down a good partition and let it do the work for you.</p>
+<ul>
+<li>Fix <span class="math inline">\(f\mathbb{:N \rightarrow N}\)</span>.</li>
+<li>We will prove that <span class="math inline">\(f\)</span> is either constant on a set in <em>"</em><span class="math inline">\(\max&quot;\ \left( p \right)\)</span> it is finite-to-one.</li>
+<li>Pick any <span class="math inline">\(\text{FS}\left( x_{n} \right) \in p\)</span> with <span class="math inline">\(x_{n} &gt; 2\sum_{i &lt; n}^{}x_{i}\)</span>.</li>
+<li>Let <em>"</em><span class="math inline">\(\min&quot;\ \)</span> be the minimum function analogous to <em>"</em><span class="math inline">\(\max&quot;\ \)</span>.</li>
+<li>Now partition <span class="math inline">\(\text{FS}\left( x_{n} \right)\)</span> into</li>
+</ul>
+<p><span class="math display">\[\left\{ y \in \text{FS}\left( x_{n} \right):f\left( \text{max}\left( y \right) \right) &lt; \text{min}\left( y \right) \right\}\]</span></p>
+<ul>
+<li>and</li>
+</ul>
+<p><span class="math display">\[\left\{ y \in \text{FS}\left( x_{n} \right):f\left( \text{max}\left( y \right) \right) \geq \text{min}\left( y \right) \right\}.\]</span></p>
+<ul>
+<li>Our strongly sumable ultrafilter will give us <span class="math inline">\(\text{FS}\left( y_{n} \right)\)</span> (with the usual growth condition) included in one of these two parts.
+<ul>
+<li>If <span class="math inline">\(\text{FS}\left( y_{n} \right)\)</span> is included in the first part, then <span class="math inline">\(f\)</span> is bounded on <em>"</em><span class="math inline">\(\max&quot;\ \left\lbrack \text{FS}\left( y_{n} \right) \right\rbrack = &quot;max&quot;\ \left\lbrack \left\{ y_{n}:n \in \omega \right\} \right\rbrack\)</span>particular, <span class="math inline">\(f\)</span> is constant on a set in <em>"</em><span class="math inline">\(\max&quot;\ \left( p \right)\)</span>Consider <span class="math inline">\(y_{0}\)</span> and pick any other <span class="math inline">\(y_{n}\)</span>.</li>
+<li>Due to the growth condition, we have <em>"</em><span class="math inline">\(\max&quot;\ \left( y_{n} \right) = &quot;max&quot;\ \left( y_{0} + y_{n} \right)\)</span>eversely <em>"</em><span class="math inline">\(\min&quot;\ \left( y_{0} + y_{n} \right) = &quot;min&quot;\ \left( y_{0} \right)\)</span>articular, <span class="math inline">\(f(``max&quot;(y\_ n) = f(``max&quot;(y\_ 0 + y\_ n)) &lt; &quot;min&quot;(y\_ 0 + y\_ n) = &quot;min&quot;(y\_ 0)\)</span>.</li>
+<li>So <span class="math inline">\(f\)</span> is bounded on <em>"</em><span class="math inline">\(\max&quot;\ \left\lbrack \text{FS}\left( y_{n} \right) \right\rbrack\)</span>d we find a</li>
+</ul>
+<ul>
+<li>If <span class="math inline">\(\text{FS}\left( y_{n} \right)\)</span> is included in the second part, then <span class="math inline">\(f\)</span> is finite-to-one on <em>"</em><span class="math inline">\(\max&quot;\ \left\lbrack \text{FS}\left( y_{n} \right) \right\rbrack = &quot;max&quot;\ \left( \left\{ y_{n}:n \in \omega \right\} \right)\)</span>ider some point in the image of <span class="math inline">\(f\)</span>, say <span class="math inline">\(k\)</span>.</li>
+<li>If for some <span class="math inline">\(y_{n}\)</span> we have <span class="math inline">\(f\left( ``max&quot;\ \left( y_{n} \right) \right) = k\)</span>hen <span class="math inline">\(k = f\left( ``max&quot;\ \left( y_{n} \right) \right) \geq &quot;min&quot;\ \left( y_{n} \right)\)</span>r assumption.</li>
+<li>But how many <span class="math inline">\(y_{n}\)</span> can there be with <em>"</em><span class="math inline">\(\min&quot;\ \left( y_{n} \right) \leq k\)</span>t most <span class="math inline">\(k\)</span>-many!
+<ul>
+<li>The <span class="math inline">\(y_{n}\)</span> will have pairwise distinct minima. Why?</li>
+<li>Remember that for <span class="math inline">\(n \neq m\)</span> we naturally have <span class="math inline">\(y_{m} + y_{n} \in \text{FS}\left( y_{n} \right) \subseteq \text{FS}\left( x_{n} \right)\)</span>.</li>
+<li>By the growth condition of the <span class="math inline">\(x_{n}\)</span>, we know that <span class="math inline">\(y_{n}\)</span> and <span class="math inline">\(y_{m}\)</span> are sums of disjoint sets of <span class="math inline">\(x_{n}\)</span>’s.</li>
+<li>In particular, their minima will differ!</li>
+</ul></li>
+<li>Therefore, <span class="math inline">\(f\)</span> is finite-to-one.</li>
+</ul></li>
+<li>And now the cheating: the last argument shows that <span class="math inline">\(f^{- 1}\left( k \right)\)</span> is at most size <span class="math inline">\(k\)</span>. To be able to make any finite-to-one function an <span class="math inline">\(k\)</span>-to-one function is, in fact, equivalent to being a rapid ultrafilter. It’s a nice exercise, but feel free to insist in the comments.</li>
+</ul>
+<p>This theorem is the reason I originally (back in 2010, in my conversations with Jana at BLAST) thought there’s a chance that all strongly summable ultrafilters are rapid. First, <em>"</em><span class="math inline">\(\max&quot;\ \)</span> is a finite-to-one function. It’s an old, probably folklore result (cf. <a href="http://dx.doi.org/10.1090/S0002-9939-1980-0548093-2#sthash.ygG3UBVz.dpuf">Miller, 1980</a>) that the finite-to-one image of a rapid ultrafilter is again rapid. Now the reverse is not true <em>but</em> our function <em>"</em><span class="math inline">\(\max&quot;\ \)</span> is so easy that it’s possible to prove this.</p>
+<blockquote>
+<p><strong>Theorem</strong> (Krautzberger (yep, this is it)) If <span class="math inline">\(p\)</span> is strongly summable, then <span class="math inline">\(p\)</span> is rapid.</p>
+</blockquote>
+<p>Here’s the gist: the trick is simple: speed up functions by <span class="math inline">\(2^{n}\)</span> and let that sped-up function be dominated in the rapid image. Then we pick an FS-set in our strongly summable ultrafilter that witnesses this domination, in particular, it’s generating sequence will dominate that sped-up function. Finally, just as in our initial observations in the first post, the FS-set will still grow fast enough to dominate the original function.</p>
+<ul>
+<li>By Matet’s theorem pick <span class="math inline">\(\text{FS}\left( x_{n} \right) \in p\)</span> such that <em>"</em><span class="math inline">\(\max&quot;\ \left( p \right)\)</span> rapid.</li>
+<li>Now pick any <span class="math inline">\(f\mathbb{:N \rightarrow N}\)</span>.</li>
+<li>We may assume that <span class="math inline">\(f\)</span> is strictly monotone (that’s all the functions we need to dominate).</li>
+<li>By Matet’s theorem we can find a set <span class="math inline">\(A \in &quot;max&quot;\ \left( p \right)\)</span>at dominates <span class="math inline">\(f \circ 2^{n + 1}\)</span>.</li>
+<li>Now fix <span class="math inline">\(\text{FS}\left( y_{n} \right) \subseteq \text{FS}\left( x_{n} \right),\text{FS}\left( y_{n} \right) \in p\)</span> such that <em>"</em><span class="math inline">\(\max&quot;\ \left\lbrack \text{FS}\left( y_{n} \right) \right\rbrack \subseteq A\)</span>or simplicity, we can assume that the <span class="math inline">\(\left( y_{n} \right)_{n \in \omega}\)</span> also satisfy the growth condition.</li>
+<li>Then <span class="math inline">\(\text{FS}\left( y_{n} \right)\)</span> dominates <span class="math inline">\(f\)</span>.
+<ul>
+<li>Let <span class="math inline">\(i\mathbb{\in N}\)</span>. We’ll show that <span class="math inline">\(\left| \text{FS}\left( y_{n} \right) \cap f\left( i \right) \right| &lt; i\)</span>.</li>
+<li>Pick the maximal <span class="math inline">\(y_{k} &lt; f\left( i \right)\)</span>.</li>
+<li>So <span class="math inline">\(f\left( i \right) \cap \text{FS}\left( y_{n} \right) \subseteq f\left( i \right) \cap \text{FS}\left( y_{0},\ldots,y_{k} \right)\)</span>, i.e., we only need to find out how large <span class="math inline">\(k\)</span> is.</li>
+<li>Of course, <span class="math inline">\(f\left( i \right) &gt; y_{k} \geq &quot;max&quot;\ \left( y_{k} \right)\)</span>ow <em>"</em><span class="math inline">\(\max&quot;\ \left\lbrack \text{FS}\left( y_{n} \right) \right\rbrack = &quot;max&quot;\ \left\lbrack \left\{ y_{n}:n \in \omega \right\} \right\rbrack \subseteq \text{Amax}&quot;\ \left( y_{k} \right)\)</span>eater or equal to the <span class="math inline">\(k\)</span>-th element of <span class="math inline">\(A\)</span>.</li>
+<li>Since the <span class="math inline">\(A\)</span> dominates <span class="math inline">\(f \circ \left( 2^{n + 1} \right)\)</span>, this gives us <em>"</em><span class="math inline">\(\max&quot;\ \left( y_{k} \right) &gt; f\left( 2^{k + 1} \right)\)</span>y <span class="math inline">\(f\)</span>’s monotonicity, <span class="math inline">\(i &gt; 2^{k + 1}\)</span>,</li>
+<li>But the set <span class="math inline">\(\text{FS}\left( y_{0},\ldots,y_{k} \right)\)</span> contains exactly <span class="math inline">\(2^{k + 1}\)</span>-many elements, i.e., less than <span class="math inline">\(i\)</span>-many elements – precisely as desired.</li>
+</ul></li>
+</ul>
+<p>Whew, ok. That’s done.</p>
+<h2 id="jana-asked-one-more-question">Jana asked one more question</h2>
+<p>After I got around to writing my argument up properly after the conference, Jana asked me whether there are could be other rapid idempotent ultrafilters. In particular, could there be so-called <em>minimal idempotents</em> which are rapid? This, again, sounded rather drastic to me. Minimal idempotents have extremely rich algebraic properties, in particular, any set in them is central and thus all versions of the Central Sets Theorem hold for such sets (as opposed to FS-sets where no FS-set with the growth condition satisfies even the simplest <a href="file:////0079/">Central Sets Theorem</a>).</p>
+<p>But, of course, by now I was skeptical of my own skepticism.</p>
+<p>To understand this question, we have to go back to strongly summable ultafilters for a second. Due to Matet’s result, we know that the existence of stongly summable ultrafilters imply the existence of rapid P-points. In particular, the existence of strongly summable ultrafilters cannot be proved using ZFC alone.</p>
+<p>But speaking of P-points and rapidity, it is a famous open problems whether there is a model with neither P-points nor Q-points. We can achieve a model without P-points and a model without Q-points, but incidentally not both. (As a taste of the problem: the continuum must at least be <span class="math inline">\(\omega_{3}\)</span> in such a model.)</p>
+<p>On top of that, there exists a model without rapid ultrafilters (hence without Q-points), but disturbingly, afaik, nobody has a model without Q-points but with rapid ultrafilters! In other words, all known models without Q-points are without rapid ultrafilters (but with P-points).</p>
+<p>Also, as a consequence of the big open question, any known model without P-points has Q-points, hence rapid ultrafilters.</p>
+<p>What I’m trying to say is that Jana’s question leads to a whole bunch of interesting and classical open problems. So it was very much worth thinking about.</p>
+<p>If there are other rapid idempotents, how do we get them? It turns out we can get the possibly strongest positive answer to this question.</p>
+<blockquote>
+<p><strong>Theorem</strong> (Krautzberger (yippie, another micro-contribution)) If there exists a rapid ultrafilter, then there exist rapid idempotent ultrafilters. In fact, then there exists a whole closed left ideal of rapid ultrafilters, in particular there are minimal idempotents which are rapid.</p>
+</blockquote>
+<p>As it turns out this follows easily from two well-known results on rapid ultrafilters which give us the following:</p>
+<blockquote>
+<p><strong>Proposition</strong> If <span class="math inline">\(p\)</span> is rapid, <span class="math inline">\(q\)</span> any ultrafilter, then <span class="math inline">\(q + p\)</span> is rapid.</p>
+</blockquote>
+<ul>
+<li>Since <span class="math inline">\(p\)</span> is rapid, the tensor product <span class="math inline">\(q \otimes p\)</span> is rapid (this can be found in <a href="http://dx.doi.org/10.1090/S0002-9939-1980-0548093-2#sthash.ygG3UBVz.dpuf">Miller, 1980</a>).</li>
+<li>Also, the finite-to-one image of a rapid ultrafilter is rapid (again, see <a href="http://dx.doi.org/10.1090/S0002-9939-1980-0548093-2#sthash.ygG3UBVz.dpuf">Miller, 1980</a>).</li>
+<li>But <span class="math inline">\(q + p = + \left( q \otimes p \right)\)</span> and addition is a finite-to-one map.</li>
+<li>Hence <span class="math inline">\(q + p\)</span> is rapid.</li>
+</ul>
+<p>Then the proof of the theorem is as follows:</p>
+<ul>
+<li>Let <span class="math inline">\(p\)</span> be a rapid ultrafilter.</li>
+<li>Then <span class="math inline">\(\beta\mathbb{N +}p\)</span> is a closed left ideal containing only rapid ultrafilters.
+<ul>
+<li>This is a closed left ideal since <span class="math inline">\(\cdot + p\)</span> is a continuous map.</li>
+<li>If <span class="math inline">\(q\)</span> is any ultrafilter, then <span class="math inline">\(q + p\)</span> is rapid.</li>
+</ul></li>
+<li>Every closed left ideal contains (by compactness) a minimal left ideal which in turn contains a minimal idempotent (that’s one way of defining them, actually).</li>
+</ul>
+<p>This theorem seems very strong to me. If I have one rapid, I have an entire closed left ideal of rapid ultrafilters – that’s one of the crucial structures in Algebra in the Stone–Čech compactification!</p>
+<p>If you happen to have strongly summable ultrafilters, this gives an even nicer observation. You see, the definition of minimal idempotent can be given in terms of minimality in a certain partial order on the idempotents, namely</p>
+<p><span class="math display">\[p \leq q\text{\ iff\ }p + q = q + p = p.\]</span></p>
+<p>There are two obvious related orders, <span class="math inline">\(p \leq_{R}q\)</span> iff <span class="math inline">\(q + p = p\)</span>, and <span class="math inline">\(\leq_{L}\)</span> (guess how it’s defined). It’s an easy exercise (really), that minimality in either partial order is minimality in all others.</p>
+<p>An old result is that strongly summable ultrafilters are right maximal (in fact, strongly right maximal: <span class="math inline">\(x + p = p\)</span> has only one solution, <span class="math inline">\(x = p\)</span>).</p>
+<p>This means that assuming we have strongly summable ultrafilters, then we have a “full spectrum” of rapid idempotents – from right maximal all the way to (right) minimal.</p>
+</body>
+</html>

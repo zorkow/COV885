@@ -1,0 +1,132 @@
+﻿Rapid idempotent ultrafilters
+2012-04-08
+Welcome back to the second (and final) part on why strongly summable ultrafilters are rapid.
+Why the new title? Well, first, I needed another one (I’ve had too many posts with “Part X” in them, I think). Second, after I proved the results I mentioned last time, I quickly found an additional, somewhat more general observation regarding idempotents.
+Here’s the problem with this post though. I want to give the argument. But you know how it is in mathematics: standing on the shoulders of the huddled masses giants and all that. All work relies on established results. In the first post, I gave a lot of “unnecessary” proofs to motivate the story behind the result. In this post, I’ll get to the actual proof and I’m torn, I’m not sure how much to quote and how much to prove. So bear with me and leave comments whenever I screw up.
+Strongly summables are rapid.
+Why could this be true? On the one hand, because we already established partial results last time. On the other hand there’s an old result attributed to Pierre Matet which, for now, I can only state in a obfuscated fashion.
+Theorem (Matet 87) If  is a strongly summable ultrafilter, then there exists a function “” such that  is rapid.
+So you see, strongly summable ultrafilters imply the existence of rapid ultrafilters – via a very simple -function.
+What’s , you’re asking?
+Ah yes, I should talk about …
+ to the Max.
+For FS-sets, there is a natural notion of maximum. If you have a bunch of elements summed up, then it makes sense to call the largest summand the maximum. So intuitively, the maximum should simply map each element in the FS-set to the largest generator involved in producing it. This might not appear very well defined but bear with me.
+Consider an FS-set, let’s keep calling it . If we’re lucky, there is a unique way to write each  as a sum of  (or should I write ? indices are hard…). For example, the sequence  has this property while  fails to have this property (quite badly, I suppose).
+It turns out that there’s an easy property to ensure this: the sequence just has to grow quickly.
+Proposition (folklore? can be found in Blass, Hindman 87) If  for all , then
+
+In other words, each element in  has a unique representation.
+[Edit May 22, 2012: modified attribution]
+The proof is an easy induction on , using the growth factor to argue that the maximal element of  and  must be equal.
+•        If , then  follows immediately from the growth assumption.
+•             Now assume inductively that we’ve proved the claim for smaller sets.
+•        Let  be the maximum of .
+•        Wlog, .
+•        Then we must also have  – otherwise
+
+•             a contradiction to the assumed equality of both sums.
+•        But if both  and  contain , we also have .
+•        Using our induction hypothesis, we have , hence .
+So if we have unique representations of elements in , we can define a function
+
+Growth, growth, growth and more growth
+Unfortunately, we need to tweak this a little bit more. Remember that FS-sets are all about sums. Very often  will have . So assuming growth,  each have a unique representation in terms of the .
+It’s natural to assume that there’s some kind of connection between the representations of . For one thing, we know that if , then . The growth as above does not guarantee the reverse, though (just consider ), and the reverse often simplifies things. Fortunately, all we have to do is improve the growth!
+Proposition (Hindman, Blass 87) If , then  if and only if  and .
+The proof is much like the earlier proof.
+•        Again, we’re doing an induction on .
+•        If , then  or  must be empty and the growth condition does the rest.
+•        For the inductive step, let .
+•        Due to the growth condition,  must be in .
+•        But it must also lie in .
+–         Else .
+•        But it can’t be in both  and .
+–         Else .
+•        Wlog 
+•          Th .
+•        Applying our induction hypothesis to , we get  and .
+•        This in turn gives us  (as ) and  – as desired.
+Why all this trouble? Well, there are many uses for this. For what’s coming below, it simplifies an important calculation. In general, it is extremely important since it allows us to switch from the addition of numbers to the union of disjoint, finite sets. (I don’t know about you, but I find the union operation on disjoint sets much easier to comprehend.)
+Corollary If  has growth as above, then if we ever have  (and we will), then, assuming , we have . In particular, if , then .
+Strongly summable ultrafitlers are rapid – the proof.
+Anyway, let’s get back to where we started. First, we should make a connection to strongly summable ultrafilters.
+Lemma (Blass, Hindman 87) If  is strongly summable, then  has a base of FS-sets whose sequences satisfy the growth condition (the stronger one with factor , of course).
+This is a great lemma (though maybe not a true lemma) and the reason why I spend so much time above talking about growth conditions – it comes in handy in many situations and really tells us something about strongly summable ultrafilters and the sets they contain. The proof, however, is weird so I’ll skip it (unless you insist in the comments).
+And now it makes sense to state the initial theorem.
+Theorem (Matet, 87 / Blass, Hindman 87) Let  be a strongly summable ultrafilter and  with growth (or just unique representations); fix the -function for  as above. Then  is a rapid P-point.
+[Edit on May 21, 2012: I rephrased the theorem to improve clarity – thanks to the comment-by-email who suggested it!]
+You can skip the proof if you like because it’s not important to us (and I’m cheating a little on the important part, rapidity). But I find the argument appealing and since I’ve had to go through all the trouble to introduce the growth condition and so forth, I think I might as well include this, too. It’s a typical proof for strongly summable ultrafilters – just write down a good partition and let it do the work for you.
+•        Fix .
+•        We will prove that  is either constant on a set in  or it is finite-to-one.
+•        Pick any  with .
+•        Let  be the minimum function analogous to .
+•        Now partition  into
+
+•             and
+
+•        Our strongly sumable ultrafilter will give us  (with the usual growth condition) included in one of these two parts.
+•        If  is included in the first part, then  is bounded on . (In particular,  is constant on a set in .)
+–         Consider  and pick any other .
+–        Due to the growth condition, we have  and reversely .
+–        In particular, .
+–        So  is bounded on  and we find a
+•        If  is included in the second part, then  is finite-to-one on .
+–        Consider some point in the image of , say .
+–         If for some  we have , then  by our assumption.
+–         But how many  can there be with ? At most -many!
+•          The  will have pairwise distinct minima. Why?
+•        Remember that for  we naturally have .
+•          By the growth condition of the , we know that  and  are sums of disjoint sets of ’s.
+•             In particular, their minima will differ!
+–        Therefore,  is finite-to-one.
+•        And now the cheating: the last argument shows that  is at most size . To be able to make any finite-to-one function an -to-one function is, in fact, equivalent to being a rapid ultrafilter. It’s a nice exercise, but feel free to insist in the comments.
+This theorem is the reason I originally (back in 2010, in my conversations with Jana at BLAST) thought there’s a chance that all strongly summable ultrafilters are rapid. First,  is a finite-to-one function. It’s an old, probably folklore result (cf. Miller, 1980) that the finite-to-one image of a rapid ultrafilter is again rapid. Now the reverse is not true but our function  is so easy that it’s possible to prove this.
+[Edit May 22, 2012: modified attribution]
+Theorem (Krautzberger (yep, this is it)) If  is strongly summable, then  is rapid.
+Here’s the gist: the trick is simple: speed up functions by  and let that sped-up function be dominated in the rapid image. Then we pick an FS-set in our strongly summable ultrafilter that witnesses this domination, in particular, it’s generating sequence will dominate that sped-up function. Finally, just as in our initial observations in the first post, the FS-set will still grow fast enough to dominate the original function.
+•        By Matet’s theorem pick  such that  is rapid.
+•        Now pick any .
+•        We may assume that  is strictly monotone (that’s all the functions we need to dominate).
+•        By Matet’s theorem we can find a set  that dominates .
+•        Now fix  such that ; for simplicity, we can assume that the  also satisfy the growth condition.
+•        Then  dominates .
+–        Let . We’ll show that .
+–        Pick the maximal .
+–        So , i.e., we only need to find out how large  is.
+–        Of course, .
+–        Now , so  is greater or equal to the -th element of .
+–        Since the  dominates , this gives us .
+–        By ’s monotonicity, ,
+–        But the set  contains exactly -many elements, i.e., less than -many elements – precisely as desired.
+Whew, ok. That’s done.
+Jana asked one more question
+After I got around to writing my argument up properly after the conference, Jana asked me whether there are could be other rapid idempotent ultrafilters. In particular, could there be so-called minimal idempotents which are rapid? This, again, sounded rather drastic to me. Minimal idempotents have extremely rich algebraic properties, in particular, any set in them is central and thus all versions of the Central Sets Theorem hold for such sets (as opposed to FS-sets where no FS-set with the growth condition satisfies even the simplest Central Sets Theorem).
+But, of course, by now I was skeptical of my own skepticism.
+To understand this question, we have to go back to strongly summable ultafilters for a second. Due to Matet’s result, we know that the existence of stongly summable ultrafilters imply the existence of rapid P-points. In particular, the existence of strongly summable ultrafilters cannot be proved using ZFC alone.
+But speaking of P-points and rapidity, it is a famous open problems whether there is a model with neither P-points nor Q-points. We can achieve a model without P-points and a model without Q-points, but incidentally not both. (As a taste of the problem: the continuum must at least be  in such a model.)
+On top of that, there exists a model without rapid ultrafilters (hence without Q-points), but disturbingly, afaik, nobody has a model without Q-points but with rapid ultrafilters! In other words, all known models without Q-points are without rapid ultrafilters (but with P-points).
+Also, as a consequence of the big open question, any known model without P-points has Q-points, hence rapid ultrafilters.
+What I’m trying to say is that Jana’s question leads to a whole bunch of interesting and classical open problems. So it was very much worth thinking about.
+If there are other rapid idempotents, how do we get them? It turns out we can get the possibly strongest positive answer to this question.
+Theorem (Krautzberger (yippie, another micro-contribution)) If there exists a rapid ultrafilter, then there exist rapid idempotent ultrafilters. In fact, then there exists a whole closed left ideal of rapid ultrafilters, in particular there are minimal idempotents which are rapid.
+As it turns out this follows easily from two well-known results on rapid ultrafilters which give us the following:
+Proposition If  is rapid,  any ultrafilter, then  is rapid.
+•        Since  is rapid, the tensor product  is rapid (this can be found in Miller, 1980).
+•             Also, the finite-to-one image of a rapid ultrafilter is rapid (again, see Miller, 1980).
+•        But  and addition is a finite-to-one map.
+•        Hence  is rapid.
+Then the proof of the theorem is as follows:
+•        Let  be a rapid ultrafilter.
+•        Then  is a closed left ideal containing only rapid ultrafilters.
+–        This is a closed left ideal since  is a continuous map.
+–        If  is any ultrafilter, then  is rapid.
+•             Every closed left ideal contains (by compactness) a minimal left ideal which in turn contains a minimal idempotent (that’s one way of defining them, actually).
+This theorem seems very strong to me. If I have one rapid, I have an entire closed left ideal of rapid ultrafilters – that’s one of the crucial structures in Algebra in the Stone–Čech compactification!
+If you happen to have strongly summable ultrafilters, this gives an even nicer observation. You see, the definition of minimal idempotent can be given in terms of minimality in a certain partial order on the idempotents, namely
+
+There are two obvious related orders,  iff , and  (guess how it’s defined). It’s an easy exercise (really), that minimality in either partial order is minimality in all others.
+An old result is that strongly summable ultrafilters are right maximal (in fact, strongly right maximal:  has only one solution, ).
+This means that assuming we have strongly summable ultrafilters, then we have a “full spectrum” of rapid idempotents – from right maximal all the way to (right) minimal.
+
+Well, and that’s all folks. I hope you enjoyed my little experiment as much as I have. I’ll certainly write a follow-up post when I’ve decided where to put a fixed copy of this.
+Please let me know if you find any errors in the proof and, more importantly, if you think I should clarify certain parts.

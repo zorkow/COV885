@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{multirow}
+\title{table}
+\begin{document}
+\begin{center}
+	\begin{tabular}{ c c c }
+		a & b & c \\
+		a & b & c \\
+		a & b & c \\
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{ |c | c | c | }
+	\hline
+		a & b & c \\
+		a & b & c \\
+		a & b & c \\
+	\hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular} { | p {3 cm} | p {3 cm} | p {3 cm} | }
+\hline
+\multicolumn{3} { | c | }{Books}\\
+\hline
+Food name & Author & Publication \\
+\hline
+Book1 & Author1 & P1 \\
+Book1 & Author2 & P2 \\
+Book1 & Author3 & P3 \\
+Book1 & Author4 & P4 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular} { | c | c | c | c | }
+\hline
+ c1 & c2 & c3 \\
+\hline
+\multirow {3} {4em} {a} & b & c \\
+& a & b\\
+& a & b\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
+
