@@ -24,7 +24,7 @@
 <title>Document Accessibility</title>
 <h1 style="text-align: left">
 Document Accessibility
-<hr> <small> Semantics: Generating, Embedding, Exposing</small>
+<hr> <small> Conversion wrap-up and Other Formats</small>
 </h1>
 <div class="Author">Volker Sorge</div>
 
@@ -48,345 +48,35 @@ iVBORw0KGgoAAAANSUhEUgAAAK8AAACoCAIAAAAZ9SmaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
 
 </div>
 
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
 <section id="slide2">
 <h2>Overview</h2>
 <ul>
-<li>Semantics
+<li>SVG formulas: Show &amp; Tell</li>
+<li>Loose ends
 <ul>
-<li>general examples</li>
-<li>info graphics examples</li>
-<li>STEM</li>
+<li>Whats missing from our converted documents</li>
 </ul>
 </li>
-<li>Embedding Semantics</li>
-<li>Exposing Semantics
+<li>Other documents
 <ul>
-<li>simple tabbing</li>
-<li>ARIA trickery</li>
-<li>JavaScript</li>
+<li>Other sources</li>
+<li>Other formats</li>
 </ul>
 </li>
-<li>Last words on Math documents</li>
 </ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
 <section id="slide3">
-<h2>Semantics: Docoments vs Web</h2>
+<h2>Show &amp; Tell</h2>
+<p>What have you done with the SVG formulas</p>
 <ul>
-<li>Semantics: the styling or annotations
-<ul>
-<li>Using <code>\section</code>, <code>\subsection</code>, or <code>Heading1</code>, <code>Heading2</code>, ... instead of
-font sizes</li>
-<li>Using lists and items instead of working with bullet points and indentation</li>
+<li>Tabbing?</li>
+<li>Navigation?</li>
+<li>Styling?</li>
+<li>Anything else?</li>
 </ul>
-</li>
-<li>On the Web we insert semantics hidden from view</li>
-</ul>
-<p><strong>Note, we are not talking about the semantic web!</strong></p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
 <section id="slide4">
-<h2>Example: Recipes</h2>
-<ul>
-<li><a target="_blank" rel="noopener"href="https://www.bbc.co.uk/food/recipes/custard_1293">With simple embedded data</a></li>
-<li><a target="_blank" rel="noopener"href="https://www.allrecipes.com/recipe/234837/egg-custard/">With Interaction</a></li>
-<li><a target="_blank" rel="noopener"href="https://www.food.com/recipe/custard-111062">With Semantic (and Interaction)</a></li>
-<li><a target="_blank" rel="noopener"href="https://www.yummly.co.uk/recipe/Egg-Custard-Tarts-2345947">With slightly different semantic</a></li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide5">
-<h2>Example: Info graphics and Interaction</h2>
-<ul>
-<li><a target="_blank" rel="noopener"href="https://www.highcharts.com/demo/box-plot">HighMaps</a></li>
-<li><a target="_blank" rel="noopener"href="https://www.highcharts.com/demo/box-plot">HighCharts</a></li>
-<li><a target="_blank" rel="noopener"href="https://www.stat.berkeley.edu/~stark/SticiGui/Text/montyHallTest.htm">SticiGui</a></li>
-</ul>
-<p>Semantics in STEM is often procedural</p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide6">
-<h2>Semantics in Math</h2>
-<ul>
-<li>Accessibility requires one or multiple alternative views</li>
-<li>Achieve this by adding semantic descriptions</li>
-<li>Different layers and modes</li>
-</ul>
-<p><strong>Syntax is not always helpful</strong></p>
-<ul>
-<li>For regular text semantics is quite straight forward</li>
-<li>Semantics for math is quite different from its syntax</li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide7">
-<h2>Generate Semantics</h2>
-<ul>
-<li>Math markup (e.g., LaTeX, MathML) are not very expressive</li>
-</ul>
-<pre><code class="language-LaTeX">    ax^2+bx+c=0
-</code></pre>
-<pre><code class="language-html">&lt;math&gt;
-  &lt;mi&gt;a&lt;/mi&gt;
-  &lt;msup&gt;
-    &lt;mi&gt;x&lt;/mi&gt;
-    &lt;mn&gt;2&lt;/mn&gt;
-  &lt;/msup&gt;
-  &lt;mo&gt;+&lt;/mo&gt;
-  &lt;mi&gt;b&lt;/mi&gt;
-  &lt;mi&gt;x&lt;/mi&gt;
-  &lt;mo&gt;+&lt;/mo&gt;
-  &lt;mi&gt;c&lt;/mi&gt;
-  &lt;mo&gt;=&lt;/mo&gt;
-  &lt;mn&gt;0&lt;/mn&gt;
-&lt;/math&gt;
-</code></pre>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide8">
-<h2>Semantics for Maths</h2>
-<p>There's been many attempts over the years</p>
-<ul>
-<li><a target="_blank" rel="noopener"href="https://www.w3.org/TR/MathML3/chapter4.html">Content MathML</a>
-<ul>
-<li>An even worse failure than Presentation MathML</li>
-<li>Some systems generate it in their semantics (e.g., Maple, Mathematica)</li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener"href="https://www.openmath.org/">OpenMath</a>: Another failed attempt at an extensible language</li>
-<li><a target="_blank" rel="noopener"href="https://www2.ph.ed.ac.uk/snuggletex/">SnuggleTex</a>: Semantics for Physics (defunct)</li>
-<li><a target="_blank" rel="noopener"href="https://dlmf.nist.gov/LaTeXML/">LateXML</a> grammatical approach to generates a
-semantic markup similar to Content MathML for the <a target="_blank" rel="noopener"href="https://dlmf.nist.gov/">DLMF</a></li>
-</ul>
-<p>Declarative approaches have all failed</p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide9">
-<h2>Generating Semantics</h2>
-<ul>
-<li>SRE reinterprets the syntax</li>
-<li>Fully disassembles the symbol structure</li>
-<li>Reassembles a semantic intepretation bottom-up</li>
-<li>Applies a number of (partially selectable) heuristics</li>
-<li>Rewrite internally into <a target="_blank" rel="noopener"href="https://zorkow.github.io/semantic-tree-visualiser/visualise.html?310000111100%3Cmath%3E%0A%20%20%3Cmi%3Ea%3C/mi%3E%0A%20%20%3Cmsup%3E%0A%20%20%20%20%3Cmi%3Ex%3C/mi%3E%0A%20%20%20%20%3Cmn%3E2%3C/mn%3E%0A%20%20%3C/msup%3E%0A%20%20%3Cmo%3E+%3C/mo%3E%0A%20%20%3Cmi%3Eb%3C/mi%3E%0A%20%20%3Cmi%3Ex%3C/mi%3E%0A%20%20%3Cmo%3E+%3C/mo%3E%0A%20%20%3Cmi%3Ec%3C/mi%3E%0A%20%20%3Cmo%3E%3D%3C/mo%3E%0A%20%20%3Cmn%3E0%3C/mn%3E%0A%3C/math%3E">semantically improved term structure</a></li>
-</ul>
-<pre><code class="language-html">&lt;math&gt;
-   &lt;mi&gt;a&lt;/mi&gt;&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
-   &lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;
-   &lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;c&lt;/mi&gt;
-   &lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;
-&lt;/math&gt;
-</code></pre>
-<p><a target="_blank" rel="noopener"href="https://zorkow.github.io/semantic-tree-visualiser/visualise.html?110000111100%5Cint%20_%7Ba%7D%5E%7Bb%7D%28%5Calpha%20f+%5Cbeta%20g%29%28x%29%5C%2Cdx%3D%5Calpha%20%5Cint%20_%7Ba%7D%5E%7Bb%7Df%28x%29%5C%2Cdx+%5Cbeta%20%5Cint%20_%7Ba%7D%5E%7Bb%7Dg%28x%29%5C%2Cdx">$$\int _{a}^{b}(\alpha f+\beta g)(x),dx=\alpha \int _{a}^{b}f(x),dx+\beta \int _{a}^{b}g(x),dx$$</a></p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide10">
-<h2>Semantic Layers</h2>
-<p>Use semantics to provide alternative views</p>
-<ul>
-<li>Navigation</li>
-<li>Highlighting</li>
-<li>Magnification</li>
-<li>Speech</li>
-<li>Braille</li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide11">
-<h2>Different Types of Semantic Embeddings</h2>
-<p>SRE provides very deep semantics, other alternatives include</p>
-<ul>
-<li>Navigation via Tabbing</li>
-<li>Parallel structures</li>
-<li>ARIA based walking</li>
-<li>Shadow DOM</li>
-<li>Pure Javascript navigation</li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide12">
-<h2>Tabbing Semantic</h2>
-<p>Reading order can be enforced and changed by using
-<a target="_blank" rel="noopener"href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex"><code>tabindex</code></a></p>
-<ul>
-<li>Adding <code>tabindex=&quot;n&quot;</code> where n is a number allows focus to be set</li>
-<li><code>tabindex=&quot;-1&quot;</code> means the element is not reachable but can be &quot;switched on&quot; programmatically</li>
-<li><code>tabindex=&quot;0&quot;</code> means the element is in the regular tab order</li>
-<li><code>tabindex=&quot;1&quot;</code>, <code>tabindex=&quot;2&quot;</code>, etc. forces a tab order</li>
-</ul>
-<p>Usually positive values should be avoided but can be useful in the context of STEM.</p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide13">
-<h2>Tabbing Example</h2>
-<p>Quadratic equation as SVG with taborder:</p>
-<ul>
-<li><a target="_blank" rel="noopener"href="../exercises/tabindex/quadratic_equation.html">Version 1</a>: progressing <code>tabindex</code>, no styling</li>
-<li><a target="_blank" rel="noopener"href="../exercises/tabindex/quadratic_equation1.html">Version 2</a>: <code>tabindex=&quot;0&quot;</code>, some styling</li>
-<li><a target="_blank" rel="noopener"href="../exercises/tabindex/quadratic_equation2.html">Version 3</a>: progressing <code>tabindex</code>, plus styling</li>
-</ul>
-<p>Alternatively with HTML and CSS:</p>
-<ul>
-<li><a target="_blank" rel="noopener"href="../exercises/tabindex/quadratic_equation0.html">CHTML Version</a>: <code>tabindex=&quot;0&quot;</code>, no styling</li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide14">
-<h2>Other Features</h2>
-<p>E.g., hover information via <code>title</code> elements</p>
-<ul>
-<li><a target="_blank" rel="noopener"href="../exercises/tabindex/quadratic_equation0.html">CHTML Version</a>
-<ul>
-<li>Adds some title <code>elements</code> containig the speech</li>
-<li>Can be exposed via hover</li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener"href="../exercises/tabindex/quadratic_equation4.html">This is more difficult to achieve for SVG</a>
-<ul>
-<li>There needs to be physical areas where we can actually tab an element</li>
-<li>Hidden rectangles can be fitted</li>
-<li>z-axis order must be carefully arranged</li>
-</ul>
-</li>
-</ul>
-<p>Exercise: Add tabs for yourself</p>
-<ul>
-<li><a target="_blank" rel="noopener"href="../exercises/tabindex/quadratic_formula.svg">Quadratic formula</a></li>
-<li><a target="_blank" rel="noopener"href="../exercises/tabindex/angle_formula.svg">Angle formula</a></li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide15">
-<h2>Semantics with ARIA</h2>
-<p><a target="_blank" rel="noopener"href="https://www.w3.org/WAI/standards-guidelines/aria/">WAI-ARIA</a></p>
-<ul>
-<li>Standard for Rich Accessible Internet Applications</li>
-<li>Offers a suite of attributes and techniques for making content accessible</li>
-<li>Recommendations for <a target="_blank" rel="noopener"href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles">best authoring
-practices</a></li>
-</ul>
-<p>Goal: Provide accessible view on standard UI elements regardless of their actual
-implementation</p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide16">
-<h2>ARIA Technology</h2>
-<ul>
-<li><a target="_blank" rel="noopener"href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles">Roles to describe</a>
-<ul>
-<li>standard widget for menu, interaction elements and states, ...</li>
-<li>content regions, headings, tables, ...</li>
-</ul>
-</li>
-<li>Navigation enhancements via landmarks
-<ul>
-<li>Complement the HTML regions</li>
-</ul>
-</li>
-<li>Keyboard navigation</li>
-<li>Live regions</li>
-<li>Developer control of accessibility API
-<ul>
-<li>E.g., hide content, change reading order</li>
-</ul>
-</li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide17">
-<h2>ARIA for STEM Documents</h2>
-<p>Document Structure</p>
-<ul>
-<li>Documents should use <a target="_blank" rel="noopener"href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">semantic HTML elements</a>
-<ul>
-<li>page layout: <code>header</code>, <code>main</code>, <code>footer</code>, etc.</li>
-</ul>
-</li>
-<li>Sometimes that is not possible, then ARIA can help</li>
-</ul>
-<p>Special Content</p>
-<ul>
-<li>Give explicit meaning via <code>aria-label</code> or <code>aria-labelledby</code></li>
-<li>Complex descriptions via <code>aria-describedby</code>, e.g., for diagrams</li>
-<li>Hide programmatic semantics via <code>aria-hidden</code></li>
-<li>Specialist navigation order</li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide18">
-<h2>Navigation with ARIA Elements</h2>
-<p>ARIA allows to give navigation control via special <code>roles</code></p>
-<p>Example: <a target="_blank" rel="noopener"href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid navigation</a></p>
-<p>Control is not always perfect</p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide19">
-<h2>Example: ARIA Navigation</h2>
-<p>Tree navigation using</p>
-<ul>
-<li><code>aria-owns</code></li>
-<li><code>aria-activedescendant</code></li>
-<li><code>role=&quot;tree&quot;</code> and <code>role=&quot;treeitem&quot;</code></li>
-</ul>
-<p>Examples on <a target="_blank" rel="noopener"href="https://krautzource.github.io/mathjax-sre-walker/docs/">Peter Krautzberger's
-page</a></p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide20">
-<h2>Advanced Navigation</h2>
-<ul>
-<li>Combine Syntax elements with hidden semantics</li>
-<li>Various embedding techniques:
-<ul>
-<li>Hidden XML structures</li>
-<li>Specialist Attributes</li>
-<li>Elements in different namespace (only possible in SVG or XHMTL)</li>
-</ul>
-</li>
-<li>Use JavaScript to exploit semantics</li>
-<li>Effectively every formula becomes a rich internet application on its own</li>
-</ul>
-<p>Advantage: Full and flexible control</p>
-<p>Disadvantage: JavaScript required, override defaults</p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide21">
-<h2>Embedding Semantics in MathJax</h2>
-<ul>
-<li>Syntax parsed by MathJax</li>
-<li>SRE enriches syntax with semantics</li>
-<li>Semantic information embedded via <code>data</code> attributes</li>
-</ul>
-<pre><code>data-semantic-...=&quot;...&quot;
-</code></pre>
-<ul>
-<li>MathJax visual rendering remains unchanged</li>
-<li>Semantic attributes are retained regardless of actual rendering
-<ul>
-<li>HTML with CSS or SVG output</li>
-</ul>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener"href="https://zorkow.github.io/semantic-tree-visualiser/visualise.html?110001111100ax%5E2+bx+c%3D0">$$ax^2+bx+c=0$$</a></p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide22">
-<h2>Navigation with Deep Semantic</h2>
-<ul>
-<li>Javascript retrieves attributes</li>
-<li>Reconstructs the semantic tree</li>
-<li>Navigation and speech generation for semantics</li>
-<li>Other output: summaries, navigation information</li>
-<li>Visual effects: highlighting, magnification, collapse</li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide23">
-<h2>Specialist Navigation Examples</h2>
-<p>$$
-J_{i}={
-\begin{bmatrix}
-C_{i} &amp; I &amp;  &amp; \\
-&amp; C_{i} &amp; \ddots  &amp; \\
-&amp;  &amp; \ddots  &amp; I\\
-&amp;  &amp;  &amp; C_{i}\\
-\end{bmatrix}
-}
-$$</p>
-<p><a target="_blank" rel="noopener"href="https://www.mathjax.org/#samples">Other examples</a></p>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide24">
-<h2>Intermediate Summary</h2>
-<p>Let's have a look at where we at</p>
-<ul>
-<li>Documents structure and semantics</li>
-<li>STEM Documents Conversion</li>
-<li>Semantics and accessibility</li>
-<li>Accessible Text and Math</li>
-<li>What's still missing?</li>
-</ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide25">
 <h2>Tying Up Loose Ends</h2>
 <p>Let's look at our example document again</p>
 <ul>
@@ -396,16 +86,530 @@ $$</p>
 <li>Make a list of things missing</li>
 <li>Come up with some author/conversion recommendations</li>
 </ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
-<section id="slide26">
-<h2>Next Steps</h2>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide5">
+<h2>Still Missing</h2>
 <ul>
-<li>Other formats, sources, conversion</li>
-<li>Diagrams</li>
-<li>Interactive Components</li>
-<li>Advanced Material</li>
+<li>Bibliography</li>
+<li>Referencing</li>
+<li>Figures (broken, badly displayed)</li>
+<li>Footnotes</li>
+<li>...</li>
 </ul>
-<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span></div></section>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide6">
+<h2>Tweaking Converters: pandoc</h2>
+<ul>
+<li>pandoc &quot;filters&quot; (extensions)
+<ul>
+<li><a target="_blank" rel="noopener"href="https://github.com/topics/pandoc-filter">github search</a></li>
+<li><a target="_blank" rel="noopener"href="https://github.com/lierdakil/pandoc-crossref">pandoc-crossref</a></li>
+<li><a target="_blank" rel="noopener"href="https://github.com/tomduck/pandoc-xnos">pandoc-xnos</a></li>
+<li><a target="_blank" rel="noopener"href="https://github.com/raghur/mermaid-filter">mermaid-filter</a></li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-bash">pandoc --filter=PROGRAM ...
+</code></pre>
+<ul>
+<li><a target="_blank" rel="noopener"href="https://github.com/pandoc/lua-filters">Lua filters</a> work directly on pandoc's AST</li>
+</ul>
+<pre><code class="language-bash">pandoc --lua-filter=SCRIPTPATH ...
+</code></pre>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide7">
+<h2>Tweaking Converters: make4ht</h2>
+<ul>
+<li><code>make4ht</code> can use multiple backends</li>
+<li><code>tex4ht</code> is not that easy to tweak</li>
+<li><code>lua4ht</code> makes use of luaTeX</li>
+<li><a target="_blank" rel="noopener"href="http://www.luatex.org/"><code>luaTeX</code></a> offers the possibility of integrating
+(post-)processing scripts</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide8">
+<h2>Bibliographies and Citations</h2>
+<p>Support for basic bibliographies is usually good</p>
+<ul>
+<li><code>\begin{bibliography}</code>, bibtex generally ok</li>
+<li>Other tooling has less support (natbib, biblatex, biber)</li>
+<li>citations should match cross-references and bibliography</li>
+<li>Backlinks are good, also for a11y
+<ul>
+<li>but not well supported, e.g. <a target="_blank" rel="noopener"href="https://tex.stackexchange.com/questions/521644/tex4ht-backref-option-of-hyperref-not-working-well">tex4ht</a></li>
+</ul>
+</li>
+<li>advanced markup (DPUB ARIA, schema.org) not supported by conversion</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide9">
+<h2>Cross-references.</h2>
+<ul>
+<li>cross reference whenever, wherever
+<ul>
+<li>links are at the core of the world wide web</li>
+<li>provides usability internally and externally (deep links)</li>
+</ul>
+</li>
+<li>use hyperref's <code>\autoref</code> or cleveref
+<ul>
+<li>better links (more hit area, better link text, simpler maintenance)</li>
+</ul>
+</li>
+<li>avoid manual ref ranges <code>\ref{1} -- \ref{8}</code></li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide10">
+<h2>Footnotes</h2>
+<ul>
+<li>Avoid footnotes.</li>
+<li>But they are actually well supported.</li>
+<li>back navigation is a must.</li>
+<li>appropriated ARIA markup might be supported</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide11">
+<h2>Indices, Glossaries, Appendices</h2>
+<ul>
+<li>Indices are rarely seen in web documents - search and links are preferred (and often easier)</li>
+<li>Glossaries are useful but often &quot;outsourced&quot; (e.g., Wikipedia, Scholarpedia)</li>
+<li>Appendices generally work like any other sectioning but counters might vary.</li>
+</ul>
+<p>DPUB ARIA markup for appendices is usually not supported by convertors (but little impact in practice).</p>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide12">
+<h2>Theorem environments</h2>
+<ul>
+<li>TeX convertors don't treat them well (just creating wrapping divs); post-processing might be feasible</li>
+<li>what are they really? Landmarks with identifiable titles
+<ul>
+<li>we lack a dedicated native solution but can make do</li>
+<li>e.g., section+heading, figure+figcaption, possibly with a roledescription</li>
+</ul>
+</li>
+<li>don't nest, don't abuse
+<ul>
+<li>amsthm advice for proofs: short = theorem, long = section</li>
+<li>e.g., don't do subclaims in proofs as theorems just because you like the styling</li>
+</ul>
+</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide13">
+<h2>Algorithm layout</h2>
+<ul>
+<li>Support in convertors is quite limited</li>
+<li>semantics is usually bad</li>
+<li>raw source code sensible if kept separate (e.g., then raw in HTML plus <a target="_blank" rel="noopener"href="https://prismjs.com/">prism.js</a>)</li>
+<li>algorithmicx, minted ok</li>
+<li>algorithm2e not great
+<ul>
+<li>e.g. with tex4ht (and manually adding whitespace:pre) it's barely passable</li>
+</ul>
+</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide14">
+<h2>Diagram authoring</h2>
+<p>We'll start with some of those tomorrow!</p>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide15">
+<h2>Considersation for LaTeX Authoring</h2>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide16">
+<h2>TeX tips: what to do</h2>
+<p>Do what good LaTeX authors would do</p>
+<ul>
+<li>pick a style guide and run with it, e.g., <a target="_blank" rel="noopener"href="https://en.wikibooks.org/wiki/LaTeX">Wikibook LaTeX</a>, <a target="_blank" rel="noopener"href="http://www.texdoc.net/texmf-dist/doc/latex/latex2e-help-texinfo/latex2e.pdf">LaTeX 2e Unofficial Manual</a>, <a target="_blank" rel="noopener"href="https://www.ams.org/publications/authors/AMS-StyleGuide-online.pdf">AMS Style Guide</a></li>
+<li>standard document setup</li>
+<li>standard sectioning</li>
+<li>standard lists,  figures, tables</li>
+<li>use labels and cross-reference them (\ref, \cite etc)
+<ul>
+<li><code>$\eqref$</code> can help with pass through</li>
+</ul>
+</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide17">
+<h2>TeX tips: what to avoid 1</h2>
+<ul>
+<li>plain TeX - LaTeX only please!</li>
+<li>TeX programming (changing core macros, active characters, loops etc)</li>
+<li><a target="_blank" rel="noopener"href="https://mirror.clientvps.com/CTAN/info/l2tabu/english/l2tabuen.pdf">LaTeX taboos</a></li>
+<li>box hackery, e.g., parbox, minipage, pbox, fbox, raisebox, rotatebox</li>
+<li>using page dimensions (\textwidth etc)</li>
+<li>using real-world dimensions (in, mm, cm etc)</li>
+<li>manual spacing (\!, hspace, vspace, hfill)</li>
+<li>manual positioning (cover pages, pgf drawing across page)</li>
+<li>custom fonts</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide18">
+<h2>TeX tips: what to avoid 2</h2>
+<ul>
+<li>color</li>
+<li>rules-based constructs</li>
+<li>generated pictures, pstricks, tikz
+<ul>
+<li>but standalone conversion can work</li>
+</ul>
+</li>
+<li>custom counters (e.g., lists)</li>
+<li>custom items (\item[...])</li>
+<li>hidden crossrefs (\ref{1}--\ref{4} etc.)</li>
+<li>hardcoded linebreaks</li>
+<li>hardcoded linelengths</li>
+<li>hardcoded whitespace</li>
+<li>avoid hacking layout using TeX (a little CSS goes a long way)</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide19">
+<h2>Tips for math mode</h2>
+<ul>
+<li>custom macros: usually as pass-through, i.e build mathjax config or extension necessary
+<ul>
+<li>example: <a target="_blank" rel="noopener"href="https://github.com/simurgh9/homework">sty file with mathjax extension</a></li>
+</ul>
+</li>
+<li>avoid mixing text and math mode, e.g.,
+<ul>
+<li>subequations, intertext etc</li>
+<li>(complex) text mode inside math mode</li>
+<li>parboxes etc inside math mode</li>
+</ul>
+</li>
+<li>avoid large tables in math mode (consider tabular)</li>
+<li>avoid long inline equations (no linebreaks)</li>
+<li>auto aligned environments can surprise
+<ul>
+<li>e.g., multline (without max-width on container)</li>
+</ul>
+</li>
+<li>auto-numbering support varies</li>
+<li>punctuation near math</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide20">
+<h2>Authoring for the Web</h2>
+<ul>
+<li>Stop thinking &quot;print only&quot;
+<ul>
+<li>You are no longer bound to a paper size</li>
+<li>Spacing should be flexible, colors can change</li>
+</ul>
+</li>
+<li>Reflow vs Pagination
+<ul>
+<li>Do not assume pages for referencing, positioning, etc.</li>
+<li>Graphics, tables, images might be in different positions</li>
+</ul>
+</li>
+<li>Size really matters
+<ul>
+<li>Content can be viewed on various form factors</li>
+<li>Make sure it displays fine even on extreme zoom</li>
+</ul>
+</li>
+<li><strong>Remember:</strong> There might be more than one output format</li>
+</ul>
+<p><strong>Note: That does not mean we want you to change your authoring workflow!</strong></p>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide21">
+<h2>Intermission</h2>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide22">
+<h2>Other Formats</h2>
+<p>Source to Web is easy</p>
+<p>What about other formats?</p>
+<ul>
+<li>Hard Sources</li>
+<li>Different Targets</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide23">
+<h2>Taxonomy of Sources</h2>
+<ul>
+<li>Retro-digitized
+<ul>
+<li>Printed content that is put into digital format</li>
+<li>Scanned, images, electronic documents with scanned images</li>
+</ul>
+</li>
+<li>Born Digital
+<ul>
+<li>Document has been generated from some electronic source</li>
+<li>However the sources are not available to us</li>
+</ul>
+</li>
+<li>Born Accessible
+<ul>
+<li>Documents that have been generated with accessibility in mind</li>
+<li>Or at least accessibility is not precluded</li>
+<li>E.g., we can get to the sources</li>
+</ul>
+</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide24">
+<h2>Retro-digitized</h2>
+<ul>
+<li>Documents which originally are only available in print</li>
+<li>Retro-digitization includes
+<ul>
+<li>Scanning</li>
+<li>OCR</li>
+<li>Correcting</li>
+</ul>
+</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide25">
+<h2>Retro-digitized Documents</h2>
+<p>Scanned version of</p>
+<ul>
+<li>historical manuscripts</li>
+<li>old books and runs of journals</li>
+<li>Sources: libraries, <a target="_blank" rel="noopener"href="https://jstor.org">JSTOR</a>, publishers</li>
+</ul>
+<p>Optical Character Recognition (OCR)</p>
+<ul>
+<li>From images to print</li>
+<li>Simple programs often come with scanner</li>
+</ul>
+<p>Improving results</p>
+<ul>
+<li>From automation to manual transcription</li>
+<li>Correction and Proof reading</li>
+<li>Crowd sourcing with projects like <a target="_blank" rel="noopener"href="https://www.zooniverse.org/">Zooniverse</a></li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide26">
+<h2>What about Math</h2>
+<p>Math OCR is notoriously difficult</p>
+<ul>
+<li>Math detection</li>
+<li>Layout Analysis</li>
+<li>No dictionary analysis</li>
+<li>Multiple Fonts</li>
+<li>Print/Font Variation in particular for legacy documents</li>
+<li>...</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide27">
+<h2>OCR Systems</h2>
+<ul>
+<li>General OCR systems are usually poor at Math
+<ul>
+<li><a target="_blank" rel="noopener"href="https://pdf.abbyy.com">Abby Fine Reader</a>: Proprietary, has some special fonts</li>
+<li><a target="_blank" rel="noopener"href="https://github.com/tesseract-ocr/tesseract">Tesseract</a>: Open source <a target="_blank" rel="noopener"href="../resources/ocr/cjm1996v48p0467.g4.tiff">Example</a>, <a target="_blank" rel="noopener"href="../resources/ocr/cjm.docx">Result</a></li>
+<li><a target="_blank" rel="noopener"href="https://en.wikipedia.org/wiki/GOCR">GOCR</a>: Open source. <a target="_blank" rel="noopener"href="../resources/ocr/cjm1996v48p0467.g4.tiff">Example</a>, <a target="_blank" rel="noopener"href="../resources/ocr/cjm.html">Result</a></li>
+</ul>
+</li>
+<li>Specialist OCR system like <a target="_blank" rel="noopener"href="http://www.inftyproject.org/">Infty</a>
+<ul>
+<li><a target="_blank" rel="noopener"href="https://www.inftyreader.org/">Full document analysis</a></li>
+<li>Proprietary</li>
+<li>Windows only</li>
+</ul>
+</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide28">
+<h2>Snapshotting</h2>
+<p>Snapshotting as in &quot;Making an isolated observation&quot;</p>
+<ul>
+<li>Crop a formula from an image</li>
+<li>OCR works often more reliably
+<ul>
+<li>its known to be math</li>
+<li>no noisy context</li>
+<li>little need for layout analysis</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><a target="_blank" rel="noopener"href="https://mathpix.com/">Mathpix Snip</a></li>
+<li><a target="_blank" rel="noopener"href="https://www.texthelp.com/en-us/products/equatio/">EquatIO</a></li>
+</ul>
+</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide29">
+<h2>Born Digital</h2>
+<p>Documents where source and target are electronic</p>
+<ul>
+<li>compiled for print only</li>
+<li>sources are no longer available</li>
+</ul>
+<p>Document types</p>
+<ul>
+<li>Now primarily PDF documents</li>
+<li>Other formats: Rich Text Format (<code>.rtf</code>), Postscript (<code>.ps</code>)</li>
+<li>They can generally be losslessly converted to PDF</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide30">
+<h2>PDF as only source</h2>
+<p>Source: Nothing but inaccessible PDF</p>
+<ul>
+<li>Text only is relatively accessible</li>
+<li>Read-aloud in Acrobat Reader</li>
+<li>Works with multiple screen readers</li>
+<li>Many tools for pure text extraction
+<ul>
+<li>Even just copying works</li>
+</ul>
+</li>
+<li>Common problems:
+<ul>
+<li>Poor reading order</li>
+<li>Missing alt texts for images</li>
+<li>Headers, footers, etc. can interfere</li>
+</ul>
+</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide31">
+<h2>Math in Born Digital PDF</h2>
+<ul>
+<li>Surprisingly difficult problem</li>
+<li>Requires: pattern recognition or OCR</li>
+<li>Consider our example: <a target="_blank" rel="noopener"href="../exercises/math_example/rademacher_2013-12-16.pdf">original PDF</a>
+<ul>
+<li>Problems with fonts</li>
+<li>Incomplete position and box information for layout analysis</li>
+<li>Some math is in images</li>
+</ul>
+</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide32">
+<h2>Some solutions</h2>
+<ul>
+<li><code>Maxtract</code> system (2008)
+<ul>
+<li>Full content extraction</li>
+<li>Grammatical approach at PDF reconstruction</li>
+<li>Very limited in terms of PDF versions it could handle</li>
+<li><a target="_blank" rel="noopener"href="../resources/maxtract/sternberg_p86p317.pdf">Single column</a>,
+<a target="_blank" rel="noopener"href="../resources/maxtract/sternberg_page001.pdf">result</a>, <a target="_blank" rel="noopener"href="../resources/maxtract/artale_p2p3.pdf">two columns</a>,
+<a target="_blank" rel="noopener"href="../resources/maxtract/artale_page001.pdf">result</a></li>
+</ul>
+</li>
+<li>Current Ravi Project at IIT:
+<ul>
+<li>Full extraction for client side rendering</li>
+<li>Comprehensive approach</li>
+<li>Reuses the good part of Maxtract</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener"href="https://inftyproject.org">Infty</a> system has implemented some of the Maxtract
+ideas</li>
+<li><a target="_blank" rel="noopener"href="http://apricot.cis.ibaraki.ac.jp/PDFtools/">Akio Fujiyoshi's Lab</a> has some
+nice solutions for the bounding box problem</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide33">
+<h2>Born Accessible</h2>
+<p>Conversion to formats that are in principle accessible</p>
+<ul>
+<li>PDF documents</li>
+<li>ePub and similar formats, like Daisy</li>
+<li>Web documents (as discussed in detail)</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide34">
+<h2>PDF documents</h2>
+<ul>
+<li>PDF can be made accessible, there is even a version: PDF/UA</li>
+<li>Requires a lot of &quot;goodwill&quot; by authors</li>
+<li>Some tools are more suitable for generating accessible PDFs
+<ul>
+<li>Word good, LaTeX not</li>
+</ul>
+</li>
+<li>There are a number of tools for accessibility checking
+<ul>
+<li>Some free</li>
+<li>Acrobat Pro is proprietary and <strong>not free</strong></li>
+</ul>
+</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide35">
+<h2>Generating accessible PDF</h2>
+<ul>
+<li>Important: Reading order, Alt Texts, Header nesting</li>
+<li>Word can generate PDF/UA without Math support</li>
+<li>LaTeX has very poor support for PDF/UA</li>
+<li>Adobe Acrobat Pro can help adding accessibility</li>
+<li>Alternatively consider a <code>pandoc</code> workflow via Word</li>
+<li>LaTeX is good for Maths but not for structure</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide36">
+<h2>PDF: Current state</h2>
+<p>No generator for fully accessbile PDF</p>
+<ul>
+<li>Fixing Accessibility issues is
+<ul>
+<li>Time consuming</li>
+<li>Often repetitive</li>
+<li>Only work well in Acrobat Pro (proprietary + <strong>not free</strong>)</li>
+</ul>
+</li>
+<li>PDF has multiple layers to hide additional information or alternative formats
+<ul>
+<li>Poorly supported</li>
+<li>No flexible reflow</li>
+</ul>
+</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide37">
+<h2>EPubs</h2>
+<ul>
+<li>Format is close to HTML5</li>
+<li>Same techniques as for our web documents apply</li>
+<li>Some issues due to XHTML handling: namespaces, etc.</li>
+<li>Epub readers very greatly
+<ul>
+<li>provsion of MathJax for Math</li>
+<li>SVG for Diagrams</li>
+<li>Javascript for accessibility</li>
+</ul>
+</li>
+</ul>
+<p>Let's have a look at the <a target="_blank" rel="noopener"href="http://diagramcenter.org/diagram-reports/diagram-2020-report/multimodal-stem-documents.html#math-braille">diagram report</a>
+<a target="_blank" rel="noopener"href="chrome-extension://jhhclmfgfllimlhabjkgkeebkbiadflb/reader.html">Test with EPub reader</a></p>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide38">
+<h2>Other Alternative Formats: Braille</h2>
+<p>Source: LaTeX <a target="_blank" rel="noopener"href="https://pretextbook.org/">in PreTeXt format</a></p>
+<p>Target: embossed Braille</p>
+<ul>
+<li>PreTeXt is an XML markup with LaTeX for math.</li>
+<li>PreTeXt books are translated automatically into Braille with
+<ul>
+<li>Liblouis for the text</li>
+<li>MathJax for formulas using SRE's Nemeth translation</li>
+</ul>
+</li>
+<li>Multistep translation pipeline server-side using MathJax</li>
+<li>Current pipeline is mainly a prototype</li>
+<li>Tactile graphics still done primarily manually</li>
+<li>Project with the NFB, PreTeXt and AIM</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
+<section id="slide39">
+<h2>Outlook</h2>
+<ul>
+<li>Diagrams</li>
+<li>Sonfication</li>
+<li>Advanced content</li>
+</ul>
+<div class="directlinks"><span class="directlink"><a href="#slide1">1</a></span><span class="directlink"><a href="#slide2">2</a></span><span class="directlink"><a href="#slide3">3</a></span><span class="directlink"><a href="#slide4">4</a></span><span class="directlink"><a href="#slide5">5</a></span><span class="directlink"><a href="#slide6">6</a></span><span class="directlink"><a href="#slide7">7</a></span><span class="directlink"><a href="#slide8">8</a></span><span class="directlink"><a href="#slide9">9</a></span><span class="directlink"><a href="#slide10">10</a></span><span class="directlink"><a href="#slide11">11</a></span><span class="directlink"><a href="#slide12">12</a></span><span class="directlink"><a href="#slide13">13</a></span><span class="directlink"><a href="#slide14">14</a></span><span class="directlink"><a href="#slide15">15</a></span><span class="directlink"><a href="#slide16">16</a></span><span class="directlink"><a href="#slide17">17</a></span><span class="directlink"><a href="#slide18">18</a></span><span class="directlink"><a href="#slide19">19</a></span><span class="directlink"><a href="#slide20">20</a></span><span class="directlink"><a href="#slide21">21</a></span><span class="directlink"><a href="#slide22">22</a></span><span class="directlink"><a href="#slide23">23</a></span><span class="directlink"><a href="#slide24">24</a></span><span class="directlink"><a href="#slide25">25</a></span><span class="directlink"><a href="#slide26">26</a></span><span class="directlink"><a href="#slide27">27</a></span><span class="directlink"><a href="#slide28">28</a></span><span class="directlink"><a href="#slide29">29</a></span><span class="directlink"><a href="#slide30">30</a></span><span class="directlink"><a href="#slide31">31</a></span><span class="directlink"><a href="#slide32">32</a></span><span class="directlink"><a href="#slide33">33</a></span><span class="directlink"><a href="#slide34">34</a></span><span class="directlink"><a href="#slide35">35</a></span><span class="directlink"><a href="#slide36">36</a></span><span class="directlink"><a href="#slide37">37</a></span><span class="directlink"><a href="#slide38">38</a></span><span class="directlink"><a href="#slide39">39</a></span></div></section>
 
 </div>
 </body>
